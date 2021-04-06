@@ -15,7 +15,7 @@ echo ""
 
 source $PROJECT_PATH/bin/loadenv
 
-echo "Downloading" $JDK_URL "to" $JDK_DOWNLOAD_DIR
-wget $JDK_URL -P $JDK_DOWNLOAD_DIR
-tar -zxvf $JDK_DOWNLOAD_DIR/$JDK_TARFILE --directory $JDK_DOWNLOAD_DIR
-rm $JDK_DOWNLOAD_DIR/$JDK_TARFILE
+echo "Downloading" $JDK_URL "to" $JDK_TARGET
+wget $JDK_URL -P $JDK_TARGET
+tar -zxvf $JDK_TARGET/$JDK_TARFILE --directory $JDK_TARGET
+rm $JDK_TARGET/$JDK_TARFILE

@@ -1,10 +1,10 @@
 # JDK Download section
 # Downloading java version lower than 9 is up to you
 JDK11_URL=https://download.java.net/java/ga/jdk11/openjdk-11_linux-x64_bin.tar.gz
-JDK11_DOWNLOAD_DIR=$PROJECT_PATH/opt/java
+JDK11_TARGET=$PROJECT_PATH/opt/java
 JDK11_TARFILE=openjdk-11_linux-x64_bin.tar.gz
 JDK_URL=$JDK11_URL
-JDK_DOWNLOAD_DIR=$JDK11_DOWNLOAD_DIR
+JDK_TARGET=$JDK11_TARGET
 JDK_TARFILE=$JDK11_TARFILE
 # End JDK Download section
 

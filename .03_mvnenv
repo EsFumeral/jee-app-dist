@@ -1,10 +1,10 @@
 # Maven Download section
 MAVEN_363_URL=https://ftp.cixug.es/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
-MAVEN_363_DOWNLOAD_DIR=$PROJECT_PATH/opt/maven
+MAVEN_363_TARGET=$PROJECT_PATH/opt/maven
 MAVEN_363_TARFILE=apache-maven-3.6.3-bin.tar.gz
 
 MAVEN_URL=$MAVEN_363_URL
-MAVEN_DOWNLOAD_DIR=$MAVEN_363_DOWNLOAD_DIR
+MAVEN_TARGET=$MAVEN_363_TARGET
 MAVEN_TARFILE=$MAVEN_363_TARFILE 
 
 # End Maven Download section
