@@ -87,7 +87,7 @@ RUN sed -i "s/<resolve-parameter-values>false<\/resolve-parameter-values>/ <reso
 
 RUN rm -rf standalone/configuration/standalone_xml_history/current
 
-COPY ./wildfly/files/goibusuari.ear ${JBOSS_HOME}/standalone/deployments/
+#COPY ./wildfly/files/goibusuari.ear ${JBOSS_HOME}/standalone/deployments/
 
 EXPOSE 8080 8443 9990
 ENTRYPOINT ["/bin/bash", "-c"]

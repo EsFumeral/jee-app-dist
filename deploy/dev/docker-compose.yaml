@@ -3,7 +3,10 @@ services:
   wildfly:
     build:
       context: ../../builds/wildfly-dist
-    container_name: wildfly-goib
+      args:
+        - KEYCLOAK_URI_ARG=${KEYCLOAK_URI_ARG}
+    container_name: wildfly-${LONG_APP_NAME_LOWER}
+    hostname: wildfly-${LONG_APP_NAME_LOWER}
     environment:
      - ADMIN_USER=admin
      - ADMIN_PASSWORD=admin
@@ -11,7 +14,8 @@ services:
      - 8080:8080
      - 9990:9990
     volumes:
-     - /tmp/deployments:/opt/jboss/wildfly/standalone/deployments
+     - ../../builds/wildfly-dist/wildfly/deployments:/opt/jboss/wildfly/standalone/deployments 
+     #- /tmp/deployments:/opt/jboss/wildfly/standalone/deployments
      # - C:\tmp\deployments:/opt/jboss/wildfly/standalone/deployments
     depends_on:
       - keycloak
@@ -20,7 +24,8 @@ services:
   keycloak:
     build:
       context: ../../builds/keycloak-dist
-    container_name: keycloak-goib
+    container_name: keycloak-${LONG_APP_NAME_LOWER}
+    hostname: keycloak-${LONG_APP_NAME_LOWER}
     environment:
      - KEYCLOAK_USER=admin
      - KEYCLOAK_PASSWORD=admin
