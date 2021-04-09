@@ -14,7 +14,7 @@ services:
      - 8080:8080
      - 9990:9990
     volumes:
-     - ../../builds/wildfly-dist/wildfly/deployments:/opt/jboss/wildfly/standalone/deployments 
+     - ../../builds/wildfly-dist/wildfly/deployments:/opt/jboss/wildfly/standalone/deployments
      #- /tmp/deployments:/opt/jboss/wildfly/standalone/deployments
      # - C:\tmp\deployments:/opt/jboss/wildfly/standalone/deployments
     depends_on:
