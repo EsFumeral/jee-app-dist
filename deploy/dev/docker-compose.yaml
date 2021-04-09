@@ -14,7 +14,8 @@ services:
      - 8080:8080
      - 9990:9990
     volumes:
-     - ../../builds/wildfly-dist/wildfly/deployments:/opt/jboss/wildfly/standalone/deployments
+     - /app/jboss/wildfly/${LONG_APP_NAME_LOWER}/deployments:/opt/jboss/wildfly/standalone/deployments
+     #- ../../builds/wildfly-dist/wildfly/deployments:/opt/jboss/wildfly/standalone/deployments
      #- /tmp/deployments:/opt/jboss/wildfly/standalone/deployments
      # - C:\tmp\deployments:/opt/jboss/wildfly/standalone/deployments
     depends_on:
@@ -52,9 +53,9 @@ services:
       - "5441:5432"
     volumes:
       - ../../builds/postgresql-dist/postgresql/bin/docker-entrypoint-initdb.d/00_initdb.sh:/docker-entrypoint-initdb.d/00_initdb.sh:ro
-      - ../../builds/postgresql-dist/postgresql/data/${LONG_APP_NAME_LOWER}:/var/lib/postgresql/data
-      - ../../builds/postgresql-dist/postgresql/tablespaces/${LONG_APP_NAME_LOWER}:/var/lib/postgresql/app/tablespaces
-      - ../../builds/postgresql-dist/postgresql/backups/${LONG_APP_NAME_LOWER}:/var/lib/postgresql/app/backups
+      - /app/docker/postgresql/${LONG_APP_NAME_LOWER}/data:/var/lib/postgresql/data
+      #- ../../builds/postgresql-dist/postgresql/tablespaces/${LONG_APP_NAME_LOWER}:/var/lib/postgresql/app/tablespaces
+      #- ../../builds/postgresql-dist/postgresql/backups/${LONG_APP_NAME_LOWER}:/var/lib/postgresql/app/backups
     environment:
       - POSTGRES_PASSWORD=postgres
       - LONG_APP_NAME=${LONG_APP_NAME_LOWER}
@@ -71,9 +72,9 @@ services:
       - "5442:5432"
     volumes:
       - ../../builds/postgresql-dist/postgresql/bin/docker-entrypoint-initdb.d/00_initdb.sh:/docker-entrypoint-initdb.d/00_initdb.sh:ro
-      - ../../builds/postgresql-dist/postgresql/data/seycon-${SHORT_APP_NAME_LOWER}:/var/lib/postgresql/data
-      - ../../builds/postgresql-dist/postgresql/data/seycon-${SHORT_APP_NAME_LOWER}:/var/lib/postgresql/app/tablespaces
-      - ../../builds/postgresql-dist/postgresql/data/seycon-${SHORT_APP_NAME_LOWER}:/var/lib/postgresql/app/backups
+      - /app/docker/postgresql/seycon-${SHORT_APP_NAME_LOWER}/data:/var/lib/postgresql/data
+      #- ../../builds/postgresql-dist/postgresql/data/seycon-${SHORT_APP_NAME_LOWER}:/var/lib/postgresql/app/tablespaces
+      #- ../../builds/postgresql-dist/postgresql/data/seycon-${SHORT_APP_NAME_LOWER}:/var/lib/postgresql/app/backups
     environment:
       - POSTGRES_PASSWORD=postgres
       - LONG_APP_NAME=seycon

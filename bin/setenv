@@ -14,7 +14,7 @@ echo "[$(date +"%Y-%m-%d %T")] Setting .env file..."
 echo ""
 
 touch .environment
-for FILE in .?*env; do
+for FILE in settings/[0-9]*; do
     echo "Loading: "$FILE
     echo $'\n' >> .environment
     cat $FILE >> .environment
