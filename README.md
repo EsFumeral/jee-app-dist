@@ -234,7 +234,7 @@ Although is possible to config any type of parameter, passwords should never be 
 
 ## Authors
 
-* **gdeignacio**  - [gdeignacio-fundaciobit](https://github.com/gdeignacio-fundaciobit)
+* **gdeignacio**  - [gdeignacio](https://github.com/gdeignacio)
 
 ## License
 
