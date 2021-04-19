@@ -1,6 +1,6 @@
 #!/bin/bash
 #### Description: Build and deploy from source
-#### Written by: Guillermo de Ignacio - gdeignacio@fundaciobit.org on 04-2021
+#### Written by: Guillermo de Ignacio - gdeignacio@gmail.com on 04-2021
 
 ###################################
 ###   DEPLOY MVN UTILS          ###
