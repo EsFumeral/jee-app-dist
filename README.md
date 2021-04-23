@@ -1,4 +1,4 @@
-# emiserv-dist
+# jee-app-dist
 
 Env settings and command line tools for jee building and deployment. Openjdk &amp; maven.
 
@@ -25,7 +25,7 @@ The specific steps to installing Docker will differ depending on the host's oper
 Clone this repository on your local machine
 
 ```bash
-git clone https://github.com/Fundacio-Bit/emiserv-dist.git
+git clone https://github.com/gdeignacio/jee-app-dist.git
 ```
 
 ## Setting environment values
@@ -41,12 +41,12 @@ git clone https://github.com/Fundacio-Bit/emiserv-dist.git
     # bin/compile
     # deploy/default/docker-compose.yaml
     #
-    LONG_APP_NAME_UPPER=EMISERV
-    LONG_APP_NAME_LOWER=emiserv
-    LONG_APP_NAME_CAMEL=Emiserv
-    SHORT_APP_NAME_UPPER=EMS
-    SHORT_APP_NAME_LOWER=ems
-    SHORT_APP_NAME_CAMEL=Ems
+    LONG_APP_NAME_UPPER=JEEAPP
+    LONG_APP_NAME_LOWER=jeeapp
+    LONG_APP_NAME_CAMEL=JeeApp
+    SHORT_APP_NAME_UPPER=APP
+    SHORT_APP_NAME_LOWER=app
+    SHORT_APP_NAME_CAMEL=App
     # end app section
     ```
 
@@ -152,7 +152,7 @@ Although is possible to config any type of parameter, passwords should never be 
 1. Clone this repository on your local machine if you didn't yet. 
 
     ```bash
-    git clone https://github.com/Fundacio-Bit/emiserv-dist.git
+    git clone https://github.com/Fundacio-Bit/jee-app-dist.git
     ```
 
 2. Run [installdocker](./bin/installdocker) script to update and install docker.
