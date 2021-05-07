@@ -1,6 +1,6 @@
 #!/bin/bash
 #### Description: Build from source
-#### Written by: Guillermo de Ignacio - gdeignacio@gmail.com on 04-2021
+#### Written by: Guillermo de Ignacio - gdeignacio@fundaciobit.org on 04-2021
 
 ###################################
 ###   BUILD MVN UTILS  ###
@@ -13,7 +13,7 @@ echo ""
 echo "[$(date +"%Y-%m-%d %T")] Build and deploy project..."
 echo ""
 
-source $PROJECT_PATH/bin/loadenv
+source $PROJECT_PATH/bin/loadenv.sh
 
 echo off
 if [[ -f help.txt ]]
@@ -23,20 +23,24 @@ else
   echo "help.txt no existe"
 fi
 
-POM=$PROJECT_PATH/source/$LONG_APP_NAME_LOWER/pom.xml 
+POM=$APP_POM_FILE
 
 if [[ -f "$POM" ]]
 then
     echo "Compiling $POM"
-    env mvn -f $POM -DskipTests $@ install --settings $PROJECT_PATH/builds/maven-dist/maven/conf/settings.xml
+    env mvn -f $POM -DskipTests $@ install  \
+      --settings $PROJECT_PATH/builds/maven-dist/maven/conf/settings.xml \
+      --toolchains $PROJECT_PATH/builds/maven-dist/maven/conf/toolchains.xml
 fi
 
-SAR=$PROJECT_PATH/source/sar/pom.xml
+SAR=$SAR_POM_FILE
+
 if [[ -f "$SAR" ]]
 then
     echo "Compiling $SAR"
-    env mvn -f $SAR -DskipTests $@ install --settings $PROJECT_PATH/builds/maven-dist/maven/conf/settings.xml
-
+    env mvn -f $SAR -DskipTests $@ install \
+      --settings $PROJECT_PATH/builds/maven-dist/maven/conf/settings.xml \
+      --toolchains $PROJECT_PATH/builds/maven-dist/maven/conf/toolchains.xml
 fi
 
 

@@ -13,3 +13,10 @@ MAVEN_TARFILE=$MAVEN_363_TARFILE
 M2_365_HOME=$MAVEN_363_TARGET/apache-maven-3.6.3
 M2_HOME=$M2_365_HOME
 # end maven section
+
+# repo section
+# Remember to configure local repo in settings.xml file
+M2_CONF=$HOME/.m2
+#M2_REPO=$M2_CONF/repository
+M2_REPO=$MAVEN_TARGET/repository
+# end repo section

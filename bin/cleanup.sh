@@ -1,6 +1,6 @@
 #!/bin/bash
 #### Description: Stops all containers
-#### Written by: Guillermo de Ignacio - gdeignacio@gmail.com on 04-2021
+#### Written by: Guillermo de Ignacio - gdeignacio@fundaciobit.org on 04-2021
 
 ###################################
 ###         Cleanup             ###

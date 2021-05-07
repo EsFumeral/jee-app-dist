@@ -1,6 +1,6 @@
 #!/bin/bash
 #### Description: Downloads and installs jdk binaries
-#### Written by: Guillermo de Ignacio - gdeignacio@gmail.com on 04-2021
+#### Written by: Guillermo de Ignacio - gdeignacio@fundaciobit.org on 04-2021
 
 ###################################
 ###   JDK INSTALL UTILS         ###
@@ -13,7 +13,7 @@ echo ""
 echo "[$(date +"%Y-%m-%d %T")] Installing JDK..."
 echo ""
 
-source $PROJECT_PATH/bin/loadenv
+source $PROJECT_PATH/bin/loadenv.sh
 
 echo "Downloading" $JDK_URL "to" $JDK_TARGET
 wget $JDK_URL -P $JDK_TARGET

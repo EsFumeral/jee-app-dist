@@ -1,6 +1,6 @@
 #!/bin/bash
 #### Description: Starts all containers
-#### Written by: Guillermo de Ignacio - gdeignacio@gmail.com on 04-2021
+#### Written by: Guillermo de Ignacio - gdeignacio@fundaciobit.org on 04-2021
 
 ###################################
 ###         Start               ###
@@ -16,7 +16,7 @@ echo ""
 echo "[$(date +"%Y-%m-%d %T")] Stopping lingering containers..."
 echo ""
 
-source $PROJECT_PATH/bin/loadenv
+source $PROJECT_PATH/bin/loadenv.sh
 
 export USER_ID=${UID}
 export GROUP_ID=${UID}

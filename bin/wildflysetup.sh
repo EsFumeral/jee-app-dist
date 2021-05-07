@@ -1,6 +1,6 @@
 #!/bin/bash
 #### Description: Downloads and installs wildfly aux binaries
-#### Written by: Guillermo de Ignacio - gdeignacio@gmail.com on 04-2021
+#### Written by: Guillermo de Ignacio - gdeignacio@fundaciobit.org on 04-2021
 
 ###################################
 ###   WILDFLY INSTALL UTILS     ###
@@ -13,7 +13,7 @@ echo ""
 echo "[$(date +"%Y-%m-%d %T")] Installing JDK..."
 echo ""
 
-source $PROJECT_PATH/bin/loadenv
+source $PROJECT_PATH/bin/loadenv.sh
 
 GOIBUSUARI_EAR_URL=https://github.com/GovernIB/docker-imatges/blob/docker-imatges-1.0/wildfly-14.0.1/files/goibusuari.ear?raw=true
 GOIBUSUARI_EAR_TARGET=$PROJECT_PATH/builds/wildfly-dist/wildfly/files
