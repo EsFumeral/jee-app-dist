@@ -25,7 +25,7 @@ The specific steps to installing Docker will differ depending on the host's oper
 Clone this repository on your local machine
 
 ```bash
-git clone https://github.com/Fundacio-Bit/emiserv-dist.git
+git clone https://github.com/gdeignacio/jee-app-dist.git
 ```
 
 ## Setting environment values
@@ -112,7 +112,7 @@ git clone https://github.com/Fundacio-Bit/emiserv-dist.git
     ```
 
 
-5. Edit [50_custom](./settings/50_custom) file.
+5. Edit [90_custom](./settings/90_custom) file.
 
     These values set custom to-deploy filenames, path updates, username for docker-compose args, and docker-compose.yaml file path. You can choose config depending on stage and services to enable. **The environment scope is local to your script**
 
@@ -152,10 +152,10 @@ Although is possible to config any type of parameter, passwords should never be 
 1. Clone this repository on your local machine if you didn't yet. 
 
     ```bash
-    git clone https://github.com/Fundacio-Bit/emiserv-dist.git
+    git clone https://github.com/gdeignacio/jee-app-dist.git
     ```
 
-2. Run [installdocker](./bin/installdocker) script to update and install docker.
+2. Run [dockerinstall](./bin/dockerinstall.sh) script to update and install docker.
 
     ```bash
     ./bin/installdocker.sh
@@ -176,7 +176,7 @@ Although is possible to config any type of parameter, passwords should never be 
 3. Check preconfigured values and change them as explained above if needed.
 
 
-4. Run [setenv](./bin/setenv) script. It generates an .env file from settings folder content to be allocated in main folder. When loading env variables, this file will be used as input. Repeat steps 2 and 3 as times as you need.
+4. Run [setenv](./bin/setenv.sh) script. It generates an .env file from settings folder content to be allocated in main folder. When loading env variables, this file will be used as input. Repeat steps 2 and 3 as times as you need.
 
     ```bash
     ./bin/setenv
@@ -187,13 +187,13 @@ Although is possible to config any type of parameter, passwords should never be 
 
 ---
 
-5. Optionally, run [installjdk](./bin/installjdk) script. It downloads a tar.gz file and inflates into preconfigured target. See ./settings/20_jdk file. If jdk version is lower than 9, jdk platform must be manually installed.
+5. Optionally, run [jdkinstall/jdk8install](./bin/jdkinstall.sh) script. It downloads a tar.gz file and inflates into preconfigured target. See ./settings/20_jdk file. If jdk version is lower than 9, jdk platform must be manually installed.
 
     ```bash
     ./bin/installjdk
     ```
 
-6. Optionally, run [installmaven](./bin/installmaven) script. It downloads a tar.gz file and inflates into preconfigured target. See ./settings/30_mvn file. Running maven requires JAVA_HOME variable.
+6. Optionally, run [maveninstall](./bin/maveninstall.sh) script. It downloads a tar.gz file and inflates into preconfigured target. See ./settings/30_mvn file. Running maven requires JAVA_HOME variable.
     
     ```bash
     ./bin/installmaven
@@ -216,13 +216,13 @@ Although is possible to config any type of parameter, passwords should never be 
 
 ---
 
-1. Run [start](./bin/start) script. Runs docker-compose and starts containers configured in docker-compose.yaml
+1. Run [start](./bin/start.sh) script. Runs docker-compose and starts containers configured in docker-compose.yaml
 
     ```bash
     ./bin/start
     ``` 
 
-2. Run [cleanup](./bin/cleanup) script. Stops all running containers
+2. Run [cleanup](./bin/cleanup.sh) script. Stops all running containers
 
     ```bash
     ./bin/cleanup
@@ -234,7 +234,7 @@ Although is possible to config any type of parameter, passwords should never be 
 
 ## Authors
 
-* **gdeignacio**  - [gdeignacio-fundaciobit](https://github.com/gdeignacio-fundaciobit)
+* **gdeignacio**  - [gdeignacio](https://github.com/gdeignacio)
 
 ## License
 
